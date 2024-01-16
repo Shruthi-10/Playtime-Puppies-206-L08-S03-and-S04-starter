@@ -53,6 +53,7 @@ header .donate-link {
   color: white;
   /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
   border-radius: 5px;
+  align-self: flex-end;
 }
 
 .header-paragraph {
@@ -212,12 +213,15 @@ footer img {
   .main-content-wrapper {
     /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
     width: 55%;
+    flex-grow: 1;
   }
 
   aside {
-    width: 300px;
+    /* width: 300px; */
     /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
+    flex: 0 0 300px;
     /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
+    align-self: flex-start;
   }
 
   footer img {
@@ -235,11 +239,13 @@ footer img {
   .about-text {
     width: 50%;
     /* Change the placement of the text by adding order: 1; */
+    order: 1;
   }
 
   .about-image {
     width: 50%;
     /* Change the placement of the image by adding order: 2; */
+    order: 2;
   }
 
 }
@@ -263,5 +269,6 @@ footer img {
 
   .program p {
     /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
+    flex-grow: 1;
   }
 }
